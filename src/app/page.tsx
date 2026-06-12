@@ -5,15 +5,24 @@ import { drawRandomCard, type TarotCard } from "@/lib/tarot-cards";
 
 type AppState = "idle" | "drawing" | "revealed" | "interpreting" | "done";
 
+type Star = { id: number; x: number; y: number; size: number; duration: number; delay: number };
+
 function Starfield() {
-  const stars = Array.from({ length: 90 }, (_, i) => ({
-    id: i,
-    x: Math.random() * 100,
-    y: Math.random() * 100,
-    size: Math.random() * 2.2 + 0.4,
-    duration: Math.random() * 4 + 1.5,
-    delay: Math.random() * 6,
-  }));
+  const [stars, setStars] = useState<Star[]>([]);
+
+  useEffect(() => {
+    setStars(
+      Array.from({ length: 90 }, (_, i) => ({
+        id: i,
+        x: Math.random() * 100,
+        y: Math.random() * 100,
+        size: Math.random() * 2.2 + 0.4,
+        duration: Math.random() * 4 + 1.5,
+        delay: Math.random() * 6,
+      }))
+    );
+  }, []);
+
   return (
     <div className="starfield">
       {stars.map((s) => (
@@ -175,7 +184,7 @@ function OracleSVG({
       {state === "done" ? (
         <>
           <path d="M 186,197 Q 200,208 214,197" fill="none" stroke="#b05a38" strokeWidth="2.5" strokeLinecap="round" />
-          <path d="M 188,197 Q 200,205 212,197" fill="#c8705050" />
+          <path d="M 188,197 Q 200,205 212,197" fill="#c87050" opacity="0.31" />
         </>
       ) : isDrawing ? (
         <ellipse cx="200" cy="198" rx="9" ry="7" fill="none" stroke="#b05a38" strokeWidth="2" />
@@ -184,8 +193,8 @@ function OracleSVG({
       )}
 
       {/* CHEEKS */}
-      <ellipse cx="165" cy="182" rx="13" ry="8" fill="#e05a4020" />
-      <ellipse cx="235" cy="182" rx="13" ry="8" fill="#e05a4020" />
+      <ellipse cx="165" cy="182" rx="13" ry="8" fill="#e05a40" opacity="0.12" />
+      <ellipse cx="235" cy="182" rx="13" ry="8" fill="#e05a40" opacity="0.12" />
 
       {/* WRINKLES */}
       <path d="M 159,170 Q 161,173 159,176" fill="none" stroke="#c8956a" strokeWidth="1.2" strokeLinecap="round" />
