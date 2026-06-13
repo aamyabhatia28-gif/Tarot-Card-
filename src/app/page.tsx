@@ -119,87 +119,112 @@ function OracleSVG({
       <text x="172" y="97" textAnchor="middle" fontSize="9" fill="#f0d080" opacity="0.5">✧</text>
       <text x="228" y="97" textAnchor="middle" fontSize="9" fill="#f0d080" opacity="0.5">✧</text>
 
-      {/* HAIR */}
-      <path d="M 152,118 Q 138,132 145,152 Q 138,165 148,175" fill="none" stroke="#ebebeb" strokeWidth="10" strokeLinecap="round" />
-      <path d="M 248,118 Q 262,132 255,152 Q 262,165 252,175" fill="none" stroke="#ebebeb" strokeWidth="10" strokeLinecap="round" />
-      <path d="M 158,125 Q 145,138 152,155" fill="none" stroke="#d8d8d8" strokeWidth="6" strokeLinecap="round" />
-      <path d="M 242,125 Q 255,138 248,155" fill="none" stroke="#d8d8d8" strokeWidth="6" strokeLinecap="round" />
+      {/* HAIR — dark with purple streak */}
+      <path d="M 154,116 Q 137,130 143,152 Q 136,167 148,178" fill="none" stroke="#160335" strokeWidth="14" strokeLinecap="round" />
+      <path d="M 246,116 Q 263,130 257,152 Q 264,167 252,178" fill="none" stroke="#160335" strokeWidth="14" strokeLinecap="round" />
+      <path d="M 157,118 Q 142,132 147,152" fill="none" stroke="#9333ea" strokeWidth="4.5" strokeLinecap="round" opacity="0.75" />
+      <path d="M 243,118 Q 258,132 253,152" fill="none" stroke="#9333ea" strokeWidth="4.5" strokeLinecap="round" opacity="0.75" />
 
-      {/* HEAD */}
-      <ellipse cx="200" cy="165" rx="46" ry="52" fill="url(#skinGrad)" />
+      {/* HEAD — rounder, more youthful */}
+      <ellipse cx="200" cy="163" rx="48" ry="50" fill="url(#skinGrad)" />
 
-      {/* GLASSES */}
-      <circle cx="183" cy="162" r="15" fill="none" stroke="#7a5200" strokeWidth="2.5" opacity="0.85" />
-      <circle cx="217" cy="162" r="15" fill="none" stroke="#7a5200" strokeWidth="2.5" opacity="0.85" />
-      <line x1="198" y1="162" x2="202" y2="162" stroke="#7a5200" strokeWidth="2" />
-      <line x1="168" y1="161" x2="162" y2="157" stroke="#7a5200" strokeWidth="2" />
-      <line x1="232" y1="161" x2="238" y2="157" stroke="#7a5200" strokeWidth="2" />
-      <circle cx="183" cy="162" r="14" fill="#c084fc" opacity="0.07" />
-      <circle cx="217" cy="162" r="14" fill="#c084fc" opacity="0.07" />
+      {/* GLASSES — round, stylish */}
+      <circle cx="183" cy="160" r="15" fill="none" stroke="#7a4a00" strokeWidth="2.5" opacity="0.8" />
+      <circle cx="217" cy="160" r="15" fill="none" stroke="#7a4a00" strokeWidth="2.5" opacity="0.8" />
+      <line x1="198" y1="160" x2="202" y2="160" stroke="#7a4a00" strokeWidth="2" />
+      <line x1="168" y1="159" x2="161" y2="155" stroke="#7a4a00" strokeWidth="2" />
+      <line x1="232" y1="159" x2="239" y2="155" stroke="#7a4a00" strokeWidth="2" />
+      <circle cx="183" cy="160" r="14" fill="#c084fc" opacity="0.08" />
+      <circle cx="217" cy="160" r="14" fill="#c084fc" opacity="0.08" />
 
-      {/* EYES */}
+      {/* EYE WHITES */}
+      <circle cx="183" cy="160" r="10" fill="white" opacity="0.95" />
+      <circle cx="217" cy="160" r="10" fill="white" opacity="0.95" />
+
+      {/* EYES — big, expressive, violet iris */}
       {eyeState === "normal" && (
         <>
-          <circle cx="183" cy="162" r="7" fill="#1e0e30" />
-          <circle cx="217" cy="162" r="7" fill="#1e0e30" />
-          <circle cx="185" cy="159.5" r="2.2" fill="white" opacity="0.85" />
-          <circle cx="219" cy="159.5" r="2.2" fill="white" opacity="0.85" />
+          <circle cx="183" cy="160" r="7" fill="#6d28d9" />
+          <circle cx="217" cy="160" r="7" fill="#6d28d9" />
+          <circle cx="183" cy="160" r="4.5" fill="#1a0835" />
+          <circle cx="217" cy="160" r="4.5" fill="#1a0835" />
+          <circle cx="185" cy="157.5" r="2.2" fill="white" opacity="0.9" />
+          <circle cx="219" cy="157.5" r="2.2" fill="white" opacity="0.9" />
+          <circle cx="181" cy="162" r="1" fill="white" opacity="0.45" />
+          <circle cx="215" cy="162" r="1" fill="white" opacity="0.45" />
         </>
       )}
       {eyeState === "wide" && (
         <>
-          <circle cx="183" cy="162" r="9" fill="#1e0e30" />
-          <circle cx="217" cy="162" r="9" fill="#1e0e30" />
-          <circle cx="185" cy="158" r="2.5" fill="white" opacity="0.9" />
-          <circle cx="219" cy="158" r="2.5" fill="white" opacity="0.9" />
-          <circle cx="183" cy="162" r="4" fill="#9333ea" opacity="0.5" />
-          <circle cx="217" cy="162" r="4" fill="#9333ea" opacity="0.5" />
+          <circle cx="183" cy="160" r="8.5" fill="#7c3aed" />
+          <circle cx="217" cy="160" r="8.5" fill="#7c3aed" />
+          <circle cx="183" cy="160" r="5.5" fill="#1a0835" />
+          <circle cx="217" cy="160" r="5.5" fill="#1a0835" />
+          <circle cx="183" cy="160" r="2.5" fill="#c084fc" opacity="0.55" />
+          <circle cx="217" cy="160" r="2.5" fill="#c084fc" opacity="0.55" />
+          <circle cx="185.5" cy="156.5" r="2.5" fill="white" opacity="0.95" />
+          <circle cx="219.5" cy="156.5" r="2.5" fill="white" opacity="0.95" />
         </>
       )}
       {eyeState === "squint" && (
         <>
-          <ellipse cx="183" cy="163" rx="8" ry="5" fill="#1e0e30" />
-          <ellipse cx="217" cy="163" rx="8" ry="5" fill="#1e0e30" />
-          <circle cx="185" cy="161" r="1.8" fill="white" opacity="0.85" />
-          <circle cx="219" cy="161" r="1.8" fill="white" opacity="0.85" />
+          <ellipse cx="183" cy="161" rx="9" ry="5.5" fill="#6d28d9" />
+          <ellipse cx="217" cy="161" rx="9" ry="5.5" fill="#6d28d9" />
+          <ellipse cx="183" cy="161" rx="6" ry="3.5" fill="#1a0835" />
+          <ellipse cx="217" cy="161" rx="6" ry="3.5" fill="#1a0835" />
+          <circle cx="185" cy="159" r="1.8" fill="white" opacity="0.85" />
+          <circle cx="219" cy="159" r="1.8" fill="white" opacity="0.85" />
         </>
       )}
       {eyeState === "happy" && (
         <>
-          <path d="M 175,164 Q 183,155 191,164" fill="#1e0e30" />
-          <path d="M 209,164 Q 217,155 225,164" fill="#1e0e30" />
-          <circle cx="183" cy="160" r="1.5" fill="white" opacity="0.7" />
-          <circle cx="217" cy="160" r="1.5" fill="white" opacity="0.7" />
+          <path d="M 173,163 Q 183,153 193,163" fill="#6d28d9" />
+          <path d="M 207,163 Q 217,153 227,163" fill="#6d28d9" />
+          <circle cx="183" cy="158" r="1.8" fill="white" opacity="0.8" />
+          <circle cx="217" cy="158" r="1.8" fill="white" opacity="0.8" />
         </>
       )}
 
-      {/* EYEBROWS */}
-      <path d="M 171,147 Q 183,142 195,147" fill="none" stroke="#8a7a6a" strokeWidth="2.2" strokeLinecap="round" />
-      <path d="M 205,147 Q 217,142 229,147" fill="none" stroke="#8a7a6a" strokeWidth="2.2" strokeLinecap="round" />
+      {/* LASHES */}
+      {eyeState !== "happy" && (
+        <>
+          <path d="M 172,151 Q 175,146 179,150" fill="none" stroke="#2d1050" strokeWidth="1.5" strokeLinecap="round" />
+          <path d="M 180,149 Q 183,145 187,148" fill="none" stroke="#2d1050" strokeWidth="1.5" strokeLinecap="round" />
+          <path d="M 188,150 Q 191,147 194,151" fill="none" stroke="#2d1050" strokeWidth="1.5" strokeLinecap="round" />
+          <path d="M 206,150 Q 209,146 213,150" fill="none" stroke="#2d1050" strokeWidth="1.5" strokeLinecap="round" />
+          <path d="M 214,148 Q 217,144 221,148" fill="none" stroke="#2d1050" strokeWidth="1.5" strokeLinecap="round" />
+          <path d="M 222,150 Q 225,146 228,151" fill="none" stroke="#2d1050" strokeWidth="1.5" strokeLinecap="round" />
+        </>
+      )}
 
-      {/* NOSE */}
-      <path d="M 200,170 Q 193,181 200,184 Q 207,181 200,170" fill="#d9956a" opacity="0.7" />
+      {/* EYEBROWS — defined arch */}
+      <path d="M 169,144 Q 183,138 197,143" fill="none" stroke="#2d1050" strokeWidth="2.5" strokeLinecap="round" />
+      <path d="M 203,143 Q 217,138 231,144" fill="none" stroke="#2d1050" strokeWidth="2.5" strokeLinecap="round" />
+
+      {/* NOSE — small, cute */}
+      <path d="M 196,177 Q 200,182 204,177" fill="none" stroke="#c8896a" strokeWidth="1.8" strokeLinecap="round" />
+      <circle cx="196.5" cy="178" r="1.5" fill="#d4906a" opacity="0.35" />
+      <circle cx="203.5" cy="178" r="1.5" fill="#d4906a" opacity="0.35" />
 
       {/* MOUTH */}
       {state === "done" ? (
         <>
-          <path d="M 186,197 Q 200,208 214,197" fill="none" stroke="#b05a38" strokeWidth="2.5" strokeLinecap="round" />
-          <path d="M 188,197 Q 200,205 212,197" fill="#c87050" opacity="0.31" />
+          <path d="M 185,193 Q 200,207 215,193" fill="none" stroke="#c05a38" strokeWidth="2.5" strokeLinecap="round" />
+          <path d="M 187,194 Q 200,205 213,194" fill="#e07858" opacity="0.28" />
+          <circle cx="183" cy="193" r="1.5" fill="#d07060" opacity="0.45" />
+          <circle cx="217" cy="193" r="1.5" fill="#d07060" opacity="0.45" />
         </>
       ) : isDrawing ? (
-        <ellipse cx="200" cy="198" rx="9" ry="7" fill="none" stroke="#b05a38" strokeWidth="2" />
+        <ellipse cx="200" cy="196" rx="8" ry="7" fill="none" stroke="#b05a38" strokeWidth="2" />
       ) : (
-        <path d="M 188,197 Q 200,205 212,197" fill="none" stroke="#b05a38" strokeWidth="2.5" strokeLinecap="round" />
+        <path d="M 188,193 Q 200,203 212,193" fill="none" stroke="#c05a38" strokeWidth="2.5" strokeLinecap="round" />
       )}
 
-      {/* CHEEKS */}
-      <ellipse cx="165" cy="182" rx="13" ry="8" fill="#e05a40" opacity="0.12" />
-      <ellipse cx="235" cy="182" rx="13" ry="8" fill="#e05a40" opacity="0.12" />
-
-      {/* WRINKLES */}
-      <path d="M 159,170 Q 161,173 159,176" fill="none" stroke="#c8956a" strokeWidth="1.2" strokeLinecap="round" />
-      <path d="M 241,170 Q 239,173 241,176" fill="none" stroke="#c8956a" strokeWidth="1.2" strokeLinecap="round" />
-      <path d="M 185,148 Q 186,145 188,148" fill="none" stroke="#c8956a" strokeWidth="1" strokeLinecap="round" />
+      {/* CHEEKS — round anime blush */}
+      <circle cx="161" cy="178" r="13" fill="#e86050" opacity="0.13" />
+      <circle cx="239" cy="178" r="13" fill="#e86050" opacity="0.13" />
+      <circle cx="161" cy="178" r="7" fill="#ff8070" opacity="0.09" />
+      <circle cx="239" cy="178" r="7" fill="#ff8070" opacity="0.09" />
 
       {/* BODY */}
       <path d="M 157,208 Q 115,270 105,420 L 295,420 Q 285,270 243,208 Z" fill="#1a0844" />
@@ -579,8 +604,9 @@ export default function Home() {
               style={{ background: "rgba(80,10,10,0.5)", border: "1px solid rgba(200,50,50,0.4)" }}
             >
               <p className="text-sm" style={{ color: "#f87171" }}>{error}</p>
-              <p className="text-xs mt-1" style={{ color: "rgba(200,100,100,0.6)" }}>
-                Make sure ANTHROPIC_API_KEY is set in your environment.
+              <p className="text-xs mt-2" style={{ color: "rgba(200,100,100,0.7)" }}>
+                Add <strong>ANTHROPIC_API_KEY</strong> in your Vercel project under{" "}
+                <em>Settings → Environment Variables</em>, then redeploy.
               </p>
             </div>
           )}
